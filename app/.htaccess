@@ -1,0 +1,2 @@
+#on bloque l'accès
+Deny from all 
