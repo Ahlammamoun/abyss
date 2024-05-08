@@ -3,8 +3,7 @@
     background-size: cover; /* Redimensionner l'image pour couvrir toute la zone */
     color: #ffffff; /* Couleur du texte */
     padding: 20px; /* Espacement intérieur */
-    border-radius: 10px; /* Bordures arrondies */
-    background-image: url('../public/assets/abyss.jpg'); /* Chemin vers votre image */
+    background-image: url('../images/abyss.jpg'); /* Chemin vers votre image */
     height: 90em;
     max-width: 100%;
 
