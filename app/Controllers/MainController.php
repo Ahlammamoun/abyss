@@ -19,11 +19,20 @@ class MainController
       
     }
 
+    public function legaleMentionsAction()
+    {
+        $this->show('mention-legal');
+      
+    }
+
     private function show($viewName, $viewData = [])
     {
+        
+        $absoluteUrl = $_SERVER['BASE_URI'];
         require_once __DIR__ . '/../views/header.tpl.php';
         require_once __DIR__ . '/../views/' . $viewName . '.tpl.php';
         require_once __DIR__ . '/../views/footer.tpl.php';
+       
     }
 
    

@@ -1,19 +1,63 @@
-
-.container {
-    background-size: cover; /* Redimensionner l'image pour couvrir toute la zone */
-    color: #ffffff; /* Couleur du texte */
-    padding: 20px; /* Espacement intérieur */
-    background-image: url('../images/abyss.jpg'); /* Chemin vers votre image */
-    height: 90em;
-    max-width: 100%;
-
+body {
+    background-color: black;
+    color: white;
 }
+
 nav.navbar.navbar-expand-lg.navbar-light {
-    border: solid 2px;
+    border: solid 2px white;
+    background-color: black;
+    color: white;
+
 }
+
 .container {
-    border-radius: 0%;
+    max-width: 800px;
+    /* Ajustez la largeur maximale selon vos besoins */
+    margin: 0 auto;
+    /* Centrer le contenu */
+
 }
-.container-footer{
-    border: solid 2px;
+
+.categories ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    /* Permet aux éléments de passer à la ligne si nécessaire */
+}
+
+.categories ul li {
+    width: 50%;
+    /* Chaque élément prend 50% de largeur pour aligner deux colonnes */
+    box-sizing: border-box;
+    /* Inclure la marge et le rembourrage dans la largeur */
+    padding: 10px;
+    /* Espace intérieur autour de chaque élément */
+}
+
+.categories ul li a {
+    display: block;
+    /* Permet de remplir toute la largeur de l'élément li */
+    text-decoration: none;
+    /* Supprimer le soulignement des liens */
+    color: blue;
+    /* Couleur du texte */
+    text-align: center;
+    /* Centrer le texte */
+}
+
+.categories ul li img {
+    width: 100%;
+    height: 200px;
+    /* Hauteur fixe pour toutes les images */
+    object-fit: cover;
+    /* Redimensionne l'image pour remplir le conteneur tout en conservant ses proportions */
+    border-radius: 5px;
+    /* Ajouter un peu de style avec des coins arrondis */
+}
+
+footer.navbar.navbar-expand-lg {
+    padding: 10%;
+    color: #007bff;
 }

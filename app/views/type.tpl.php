@@ -1,0 +1,1 @@
+<h1><?= $viewData['type_id'] ?></h1>

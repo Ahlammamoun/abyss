@@ -3,9 +3,10 @@
 
 // dependance autoload composer
 require __DIR__ . '/../vendor/autoload.php';
-
+require __DIR__ . '/../app/Controllers/TypeController.php';
 require __DIR__ . '/../app/Controllers/MainController.php';
-require __DIR__ . '/../app/Controllers/EspeceController.php';
+require __DIR__ . '/../app/Controllers/CategoryController.php';
+require __DIR__ . '/../app/Controllers/SpecieController.php';
 
 $router = new AltoRouter();
 // dump($_SERVER);
@@ -25,12 +26,45 @@ $router->map(
 
 $router->map(
     'GET', //method http autorisé pour cette route
-    '/espece/[i:id]', //la partie url aprés la racine
+    '/category/[i:id]', //la partie url aprés la racine
     [
-        'controller' => 'EspeceController',
-        'method' => 'especeAction',
+        'controller' => 'CategoryController',
+        'method' => 'categoryAction',
     ],
-    'espece', //identifiant unique pour cette route
+    'category', //identifiant unique pour cette route
+
+);
+
+$router->map(
+    'GET', //method http autorisé pour cette route
+    '/mention-legal/', //la partie url aprés la racine
+    [
+        'controller' => 'MainController',
+        'method' => 'legaleMentionsAction',
+    ],
+    'main-mention-legal', //identifiant unique pour cette route
+
+);
+
+$router->map(
+    'GET', //method http autorisé pour cette route
+    '/type/[i:id]', //la partie url aprés la racine
+    [
+        'controller' => 'TypeController',
+        'method' => 'typeAction',
+    ],
+    'type', //identifiant unique pour cette route
+
+);
+
+$router->map(
+    'GET', //method http autorisé pour cette route
+    '/specie/[i:id]', //la partie url aprés la racine
+    [
+        'controller' => 'SpecieController',
+        'method' => 'specieAction',
+    ],
+    'specie', //identifiant unique pour cette route
 
 );
 $match = $router->match();
