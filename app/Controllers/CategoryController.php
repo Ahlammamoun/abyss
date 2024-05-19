@@ -13,6 +13,11 @@ class CategoryController
     {
 
         $absoluteUrl = $_SERVER['BASE_URI'];
+
+        $type = new Type();
+        $footerOrderType = $type->findFooterOrder();
+        // dump($footerOrderType);
+
         require_once __DIR__ . '/../views/header.tpl.php';
         require_once __DIR__ . '/../views/' . $viewName . '.tpl.php';
         require_once __DIR__ . '/../views/footer.tpl.php';

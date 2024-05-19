@@ -1,28 +1,41 @@
 <footer class="navbar navbar-expand-lg ">
-        <a class="navbar-brand" href="#">Les créatures des Abysses</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <a class="navbar-brand" href="#">Créatures des Abysses</a>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">À propos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
-        </div>
+    <div class="container">
+        <ul class="list-unstyled">
+            <p>Types</p>
+            <?php foreach ($footerOrderType as $footertype) : ?>
+                <li><a class="type" href="<?= $router->generate('type', ['id' => $footertype->getId()]) ?>"<?= $footertype->getId() ?>"><?= $footertype->getName()?></a></li>
+            <?php endforeach; ?>
+        </ul>
+
+        <ul class="list-unstyled">
+            <p>Species</p>
+            <li><a href="https://www.example.com">Lien 1</a></li>
+            <li><a href="https://www.example2.com">Lien 2</a></li>
+            <li><a href="https://www.example3.com">Lien 3</a></li>
+            <li><a href="https://www.example4.com">Lien 4</a></li>
+        </ul>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">À propos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Portfolio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
 </footer>
 
 
@@ -41,4 +54,5 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 </body>
+
 </html>

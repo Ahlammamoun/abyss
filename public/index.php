@@ -1,12 +1,18 @@
 <?php
 
-
 // dependance autoload composer
 require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . '/../app/Controllers/TypeController.php';
 require __DIR__ . '/../app/Controllers/MainController.php';
 require __DIR__ . '/../app/Controllers/CategoryController.php';
 require __DIR__ . '/../app/Controllers/SpecieController.php';
+require __DIR__ . '/../app/utils/Database.php';
+require __DIR__ . '/../app/models/CoreModel.php';
+require __DIR__ . '/../app/models/Category.php';
+require __DIR__ . '/../app/models/Specie.php';
+require __DIR__ . '/../app/models/Type.php';
+
+
 
 $router = new AltoRouter();
 // dump($_SERVER);

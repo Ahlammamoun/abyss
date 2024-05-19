@@ -1,6 +1,5 @@
 <?php
 
-
 class MainController 
 {
     // Méthode chargée de gérer la page 404
@@ -16,7 +15,14 @@ class MainController
     public function homeAction()
     {
         $this->show('home');
-      
+        $categoryOnly = new Category();
+
+        $categoryObject = $categoryOnly->find(1);
+        // dump($categoryObject);
+        // dump($categoryObject->getHomeOrder());
+
+
+
     }
 
     public function legaleMentionsAction()
@@ -27,8 +33,14 @@ class MainController
 
     private function show($viewName, $viewData = [])
     {
-        
+        global $router;
         $absoluteUrl = $_SERVER['BASE_URI'];
+
+        
+        $type = new Type();
+        $footerOrderType = $type->findFooterOrder();
+        // dump($footerOrderType);
+      
         require_once __DIR__ . '/../views/header.tpl.php';
         require_once __DIR__ . '/../views/' . $viewName . '.tpl.php';
         require_once __DIR__ . '/../views/footer.tpl.php';

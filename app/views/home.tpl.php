@@ -23,7 +23,7 @@
             </li>
             <li>
                 <a href="lien_categorie_4">
-                    <img src="assets/images/abyss.jpg" alt="Description de l'image 4">
+                    <img src="assets/images/ocean.jpg" alt="Description de l'image 4">
                     Catégorie 4
                 </a>
             </li>
