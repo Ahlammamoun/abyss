@@ -1,6 +1,4 @@
 
-
-
 <pre>Mentions légales
 
 Responsable de publication : [Nom de la personne physique ou morale responsable du site]

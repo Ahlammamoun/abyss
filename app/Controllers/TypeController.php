@@ -1,6 +1,6 @@
 <?php
 
-class TypeController
+class TypeController extends CoreController
 {
 
     public function typeAction($urlParams)
@@ -17,19 +17,5 @@ class TypeController
 
     }
 
-    private function show($viewName, $viewData = [])
-    {
-    
 
-
-        $absoluteUrl = $_SERVER['BASE_URI'];
-
-            $type = new Type();
-        $footerOrderType = $type->findFooterOrder();
-        // dump($typeObject);
-        // dump($typeObject->getName());
-        require_once __DIR__ . '/../views/header.tpl.php';
-        require_once __DIR__ . '/../views/' . $viewName . '.tpl.php';
-        require_once __DIR__ . '/../views/footer.tpl.php';
-    }
 }

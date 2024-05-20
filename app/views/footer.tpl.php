@@ -1,35 +1,28 @@
+<div class="trait"></div>
 <footer class="navbar navbar-expand-lg ">
-    <a class="navbar-brand" href="#">Créatures des Abysses</a>
+    <a class="navbar-brand" href="<?= $router->generate('main-home') ?>">Créatures des Abysses</a>
 
     <div class="container">
         <ul class="list-unstyled">
-            <p>Types</p>
+            <p class="type">Groupe</p>
             <?php foreach ($footerOrderType as $footertype) : ?>
-                <li><a class="type" href="<?= $router->generate('type', ['id' => $footertype->getId()]) ?>"<?= $footertype->getId() ?>"><?= $footertype->getName()?></a></li>
+                <li class="type"><a class="type" href="<?= $router->generate('type', ['id' => $footertype->getId()]) ?>"><?= $footertype->getName()?></a></li>
             <?php endforeach; ?>
         </ul>
-
         <ul class="list-unstyled">
-            <p>Species</p>
-            <li><a href="https://www.example.com">Lien 1</a></li>
-            <li><a href="https://www.example2.com">Lien 2</a></li>
-            <li><a href="https://www.example3.com">Lien 3</a></li>
-            <li><a href="https://www.example4.com">Lien 4</a></li>
+            <p class="footer_espece">Espèce</p>
+           <?php foreach ($specieObjects as $footerSpecie) : ?>
+                <li class="specie"><a class="type" href="<?= $router->generate('specie', ['id' => $footerSpecie->getId()]) ?>"><?= $footerSpecie->getName()?></a></li>
+            <?php endforeach; ?>
         </ul>
     </div>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="<?= $router->generate('main-home') ?>">Accueil <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">À propos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Portfolio</a>
+                <a class="nav-link" href="<?= $router->generate('main-mention-legal') ?>">Mentions légales</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Contact</a>

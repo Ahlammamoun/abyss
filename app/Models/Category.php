@@ -9,6 +9,7 @@ class Category extends CoreModel
    
     private $subtitle;
     private $home_order;
+    private $picture;
 
 
     public function  getSubtitle()
@@ -20,7 +21,10 @@ class Category extends CoreModel
     {
         return $this->home_order;
     }
-
+    public function  getPicture()
+    {
+        return $this->picture;
+    }
    
     public function setSubtitle($subtitle)
     {
@@ -32,7 +36,10 @@ class Category extends CoreModel
         $this->home_order = $home_order;
     }
 
-  
+    public function setPicture($picture)
+    {
+        $this->picture = $picture;
+    }
     public function findAll()
     {
         $pdoDBConnexion = Database::getPDO();
